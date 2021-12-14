@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn {
+            width: 200px;
+            height: 200px;
+        }
+        p {
+                font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">
+        <p id="txt">关灯</p>
+    </button>
+
+
+    <script>
+        var bodyEle =document.body
+        var btn = document.querySelector('#btn')
+        var txt = document.querySelector('#txt')
+        // false代表开灯
+        var flag = false;
+        txt.onclick = function() {
+            bodyEle.style.backgroundColor = flag === false ? 'black' : 'white'
+            txt.innerHTML = flag === false ? '开灯' : '关灯'
+            flag = !flag
+
+        }
+    </script>
+</body>
+</html>
